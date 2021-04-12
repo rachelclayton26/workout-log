@@ -70,9 +70,9 @@ router.get("/:id", validateJWT, async(req, res) => {
         Update a Log
 ===============================
 */
-router.put("/:entryId", validateJWT, async(req, res) => {
-    const {title, date, entry} = req.body.log;
-    const logId = req.params.entryId;
+router.put("/:id", validateJWT, async(req, res) => {
+    const {description, definition, result} = req.body.log;
+    const logId = req.params.id;
     const userId = req.user.id;
 
     const query = {
@@ -85,7 +85,7 @@ router.put("/:entryId", validateJWT, async(req, res) => {
         const updatedLog = {
             description: description,
             definition: definition,
-            result: result,
+            result: result
         };
 
         try {
@@ -101,7 +101,7 @@ router.put("/:entryId", validateJWT, async(req, res) => {
        Delete a Log
 ===============================
 */
-router.delete(":id", validateJWT, async(req, res) => {
+router.delete("/:id", validateJWT, async(req, res) => {
     const ownerId = req.user.id;
     const logId = req.params.id;
 
