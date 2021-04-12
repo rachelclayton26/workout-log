@@ -1,0 +1,13 @@
+{
+  "name": "workout-log-server",
+  "version": "1.0.0",
+  "description": "workout application assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC"
+}
